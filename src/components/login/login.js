@@ -1,13 +1,12 @@
 import { Component } from "react";
-import { Link } from 'react-router-dom';
 import { LockClosedIcon } from '@heroicons/react/solid'
-// import Register from "../register/register";
-
+import { NavLink } from "react-router-dom";
 
 class Login extends Component {
     render() {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+
                 <div className="max-w-md w-full space-y-8">
                     <div>
                         <img
@@ -19,19 +18,14 @@ class Login extends Component {
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Or{' '}
 
-                            <Link to='/register' className="font-medium text-indigo-600 hover:text-indigo-500">Register your company</Link>
+                            <NavLink to='/register' className="font-medium text-indigo-600 hover:text-indigo-500">Register your company</NavLink>
 
-                            {/* <section>
-                                <Switch>
-                                    <Route exact path="/register">
-                                        <h1>Testeando rutas</h1>
-                                    </Route>
-                                </Switch>
-                            </section> */}
-
-                            {/* <a href="../register/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+                            {/* <a href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
                                 Register your company
                             </a> */}
+
+
+
                         </p>
                     </div>
                     <form className="mt-8 space-y-6" action="#" method="POST">
@@ -100,6 +94,7 @@ class Login extends Component {
                         </div>
                     </form>
                 </div>
+
             </div>
         )
     }

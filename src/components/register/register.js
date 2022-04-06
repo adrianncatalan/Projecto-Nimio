@@ -65,23 +65,23 @@ class Register extends Component {
                     <div className="mt-12">
                         <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                             <div>
-                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                    User name
+                                <label htmlFor="user-name" className="block text-sm font-medium text-gray-700">
+                                    Username
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your user name'
+                                        placeholder='Enter your username'
                                         type="text"
-                                        name="user-name"
-                                        id="user-name"
+                                        name="username"
+                                        id="username"
                                         autoComplete="given-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                                     Password
                                 </label>
                                 <div className="mt-1">
@@ -90,8 +90,8 @@ class Register extends Component {
                                         placeholder='Enter your password'
                                         type="password"
                                         name="password"
-                                        id="password"
-                                        autoComplete="family-name"
+                                        id="pass-word"
+                                        // autoComplete="family-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
@@ -113,7 +113,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="surname" className="block text-sm font-medium text-gray-700">
                                     Surname
                                 </label>
                                 <div className="mt-1">
@@ -129,7 +129,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
                                     Company name
                                 </label>
                                 <div className="mt-1">
@@ -145,7 +145,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="tax-id" className="block text-sm font-medium text-gray-700">
                                     Tax ID number
                                 </label>
                                 <div className="mt-1">
@@ -177,7 +177,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="zip-code" className="block text-sm font-medium text-gray-700">
                                     Zip code
                                 </label>
                                 <div className="mt-1">
@@ -193,7 +193,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                     Country
                                 </label>
                                 <div className="mt-1">
@@ -210,7 +210,7 @@ class Register extends Component {
                             </div>
 
                             <div>
-                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                                     City
                                 </label>
                                 <div className="mt-1">
@@ -226,7 +226,7 @@ class Register extends Component {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="location" className="block text-sm font-medium text-gray-700">
                                     Location
                                 </label>
                                 <div className="mt-1">

@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
-import { Component } from 'react';
+import { Component, Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
+import 'boxicons';
 import {
     BadgeCheckIcon,
     ChevronDownIcon,
@@ -8,13 +8,12 @@ import {
     CollectionIcon,
     SearchIcon,
     SortAscendingIcon,
-    StarIcon,
 } from '@heroicons/react/solid'
-import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline';
+import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Domains', href: '#', current: false },
+    { name: 'Settings', href: '#', current: true },
+    { name: 'Logout', href: '#', current: false },
 ]
 const userNavigation = [
     { name: 'Your Profile', href: '#' },
@@ -23,21 +22,21 @@ const userNavigation = [
 ]
 const projects = [
     {
-        name: 'Workcation',
+        name: 'Development of task management application',
         href: '#',
         siteHref: '#',
         repoHref: '#',
-        repo: 'debbielewis/workcation',
-        tech: 'Laravel',
+        repo: 'https://github.com/adrianncatalan/appNimio.git',
+        tech: 'React, Tailwind & Symfony',
         lastDeploy: '3h ago',
-        location: 'United states',
+        location: 'Spain, Málaga',
         starred: true,
         active: true,
     },
     // More projects...
 ]
 const activityItems = [
-    { project: 'Workcation', commit: '2d89f0c8', environment: 'production', time: '1h' },
+    { project: 'Development of task management application', commit: '', environment: 'production', time: '5h' },
     // More items...
 ]
 
@@ -74,7 +73,7 @@ class Home extends Component {
                                         <div className="flex-1 flex justify-center lg:justify-end">
                                             <div className="w-full px-2 lg:px-6">
                                                 <label htmlFor="search" className="sr-only">
-                                                    Search projects
+                                                    Search
                                                 </label>
                                                 <div className="relative text-indigo-200 focus-within:text-gray-400">
                                                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -84,7 +83,7 @@ class Home extends Component {
                                                         id="search"
                                                         name="search"
                                                         className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm"
-                                                        placeholder="Search projects"
+                                                        placeholder="Search"
                                                         type="search"
                                                     />
                                                 </div>
@@ -121,11 +120,6 @@ class Home extends Component {
                                                     <div>
                                                         <Menu.Button className="bg-indigo-700 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
                                                             <span className="sr-only">Open user menu</span>
-                                                            <img
-                                                                className="h-8 w-8 rounded-full"
-                                                                src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80"
-                                                                alt=""
-                                                            />
                                                         </Menu.Button>
                                                     </div>
                                                     <Transition
@@ -212,27 +206,15 @@ class Home extends Component {
                                                     <div className="flex-shrink-0 h-12 w-12">
                                                         <img
                                                             className="h-12 w-12 rounded-full"
-                                                            src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80"
+                                                            src="https://pbs.twimg.com/profile_images/485737516855599106/7_2o31DN_400x400.jpeg"
                                                             alt=""
                                                         />
                                                     </div>
                                                     <div className="space-y-1">
-                                                        <div className="text-sm font-medium text-gray-900">Debbie Lewis</div>
+                                                        <div className="text-sm font-medium text-gray-900">Nimio Estudio</div>
                                                         <a href="#" className="group flex items-center space-x-2.5">
-                                                            <svg
-                                                                className="h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                                                aria-hidden="true"
-                                                                fill="currentColor"
-                                                                viewBox="0 0 20 20"
-                                                            >
-                                                                <path
-                                                                    fillRule="evenodd"
-                                                                    d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                                                                    clipRule="evenodd"
-                                                                />
-                                                            </svg>
                                                             <span className="text-sm text-gray-500 group-hover:text-gray-900 font-medium">
-                                                                debbielewis
+                                                                Administrator
                                                             </span>
                                                         </a>
                                                     </div>
@@ -243,21 +225,28 @@ class Home extends Component {
                                                         type="button"
                                                         className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                     >
+                                                        New Customer
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        className="my-5 inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
+                                                    >
                                                         New Project
                                                     </button>
                                                     <button
                                                         type="button"
-                                                        className="mt-3 inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 xl:ml-0 xl:mt-3 xl:w-full"
+                                                        className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                     >
-                                                        Invite Team
+                                                        New Task
                                                     </button>
+
                                                 </div>
                                             </div>
                                             {/* Meta info */}
                                             <div className="flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-8 xl:flex-col xl:space-x-0 xl:space-y-6">
                                                 <div className="flex items-center space-x-2">
                                                     <BadgeCheckIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                                                    <span className="text-sm text-gray-500 font-medium">Pro Member</span>
+                                                    <span className="text-sm text-gray-500 font-medium">4 Customers</span>
                                                 </div>
                                                 <div className="flex items-center space-x-2">
                                                     <CollectionIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -277,7 +266,7 @@ class Home extends Component {
                                         <Menu as="div" className="relative">
                                             <Menu.Button className="w-full bg-white border border-gray-300 rounded-md shadow-sm px-4 py-2 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                                 <SortAscendingIcon className="mr-3 h-5 w-5 text-gray-400" aria-hidden="true" />
-                                                Sort
+                                                Check
                                                 <ChevronDownIcon className="ml-2.5 -mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
                                             </Menu.Button>
                                             <Menu.Items className="origin-top-right z-10 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
@@ -291,7 +280,7 @@ class Home extends Component {
                                                                     'block px-4 py-2 text-sm'
                                                                 )}
                                                             >
-                                                                Name
+                                                                Customers
                                                             </a>
                                                         )}
                                                     </Menu.Item>
@@ -304,7 +293,7 @@ class Home extends Component {
                                                                     'block px-4 py-2 text-sm'
                                                                 )}
                                                             >
-                                                                Date modified
+                                                                Projects
                                                             </a>
                                                         )}
                                                     </Menu.Item>
@@ -317,7 +306,7 @@ class Home extends Component {
                                                                     'block px-4 py-2 text-sm'
                                                                 )}
                                                             >
-                                                                Date created
+                                                                Tasks
                                                             </a>
                                                         )}
                                                     </Menu.Item>
@@ -391,30 +380,14 @@ class Home extends Component {
                                                             href={project.siteHref}
                                                             className="relative text-sm text-gray-500 hover:text-gray-900 font-medium"
                                                         >
-                                                            Visit site
+                                                            View the project
                                                         </a>
-                                                        <button
-                                                            type="button"
-                                                            className="relative bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                                        >
-                                                            <span className="sr-only">
-                                                                {project.starred ? 'Add to favorites' : 'Remove from favorites'}
-                                                            </span>
-                                                            <StarIcon
-                                                                className={classNames(
-                                                                    project.starred
-                                                                        ? 'text-yellow-300 hover:text-yellow-400'
-                                                                        : 'text-gray-300 hover:text-gray-400',
-                                                                    'h-5 w-5'
-                                                                )}
-                                                                aria-hidden="true"
-                                                            />
-                                                        </button>
+
                                                     </p>
-                                                    <p className="flex text-gray-500 text-sm space-x-2">
+                                                    <p className="mt-1.5 flex text-gray-500 text-sm space-x-2">
                                                         <span>{project.tech}</span>
                                                         <span aria-hidden="true">&middot;</span>
-                                                        <span>Last deploy {project.lastDeploy}</span>
+                                                        <span>Last modified {project.lastDeploy}</span>
                                                         <span aria-hidden="true">&middot;</span>
                                                         <span>{project.location}</span>
                                                     </p>
@@ -438,7 +411,7 @@ class Home extends Component {
                                                 <div className="flex space-x-3">
                                                     <img
                                                         className="h-6 w-6 rounded-full"
-                                                        src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80"
+                                                        src="https://pbs.twimg.com/profile_images/485737516855599106/7_2o31DN_400x400.jpeg"
                                                         alt=""
                                                     />
                                                     <div className="flex-1 space-y-1">
@@ -447,7 +420,7 @@ class Home extends Component {
                                                             <p className="text-sm text-gray-500">{item.time}</p>
                                                         </div>
                                                         <p className="text-sm text-gray-500">
-                                                            Deployed {item.project} ({item.commit} in master) to {item.environment}
+                                                            Creation of {item.project}
                                                         </p>
                                                     </div>
                                                 </div>
@@ -470,3 +443,6 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+
