@@ -176,7 +176,23 @@ class Register extends Component {
                                     />
                                 </div>
                             </div>
-                            <div>
+                            <div className="sm:col-span-2">
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                    Verify your Email
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        required
+                                        placeholder='Enter your email'
+                                        id="verify-email"
+                                        name="verify-email"
+                                        type="email"
+                                        autoComplete="email"
+                                        className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    />
+                                </div>
+                            </div>
+                            {/* <div>
                                 <label htmlFor="zip-code" className="block text-sm font-medium text-gray-700">
                                     Zip code
                                 </label>
@@ -240,7 +256,7 @@ class Register extends Component {
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="sm:col-span-2">
                                 <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
