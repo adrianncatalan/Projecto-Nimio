@@ -10,6 +10,7 @@ import {
     SortAscendingIcon,
 } from '@heroicons/react/solid'
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
+import NewTask from '../newTask/newTask';
 
 const navigation = [
     { name: 'Settings', href: '/settings', current: true },
@@ -191,7 +192,8 @@ export default function HomeAdmin() {
                                                     type="button"
                                                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                 >
-                                                    New task
+                                                    
+                                                    <a href='/newTask' >New task</a>
                                                 </button>
                                             </div>
                                         </div>

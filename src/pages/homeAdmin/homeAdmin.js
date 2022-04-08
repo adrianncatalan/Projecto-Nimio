@@ -10,6 +10,7 @@ import {
     SortAscendingIcon,
 } from '@heroicons/react/solid'
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
+import { NavLink } from "react-router-dom";
 
 const navigation = [
     { name: 'Settings', href: '/settings', current: true },
@@ -125,7 +126,7 @@ export default function HomeAdmin() {
                                                     leaveFrom="transform opacity-100 scale-100"
                                                     leaveTo="transform opacity-0 scale-95"
                                                 >
-                                                    
+
                                                 </Transition>
                                             </Menu>
                                         </div>
@@ -151,7 +152,7 @@ export default function HomeAdmin() {
                                         </a>
                                     ))}
                                 </div>
-                                
+
                             </Disclosure.Panel>
                         </>
                     )}
@@ -187,28 +188,34 @@ export default function HomeAdmin() {
                                             </div>
                                             {/* Action buttons */}
                                             <div className="flex flex-col sm:flex-row xl:flex-col">
-                                                <button
+
+
+                                                <NavLink to='/newCustomer' ><button
                                                     type="button"
                                                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                 >
-                                                    New Customer
+                                                    New customer
                                                 </button>
+                                                </NavLink>
+
                                             </div>
                                             <div className="flex flex-col sm:flex-row xl:flex-col">
-                                                <button
+                                                <NavLink to='/newProject' ><button
                                                     type="button"
                                                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                 >
-                                                    New Project
+                                                    New project
                                                 </button>
+                                                </NavLink>
                                             </div>
                                             <div className="flex flex-col sm:flex-row xl:flex-col">
-                                                <button
+                                            <NavLink to='/newWorker' ><button
                                                     type="button"
                                                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 xl:w-full"
                                                 >
-                                                    New Worker
+                                                    New worker
                                                 </button>
+                                                </NavLink>
                                             </div>
                                         </div>
                                         {/* Meta info */}
@@ -319,7 +326,7 @@ export default function HomeAdmin() {
                                                         </h2>
                                                     </span>
                                                 </div>
-                                                
+
                                             </div>
                                             <div className="sm:hidden">
                                                 <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
