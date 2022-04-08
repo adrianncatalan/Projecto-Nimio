@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import 'boxicons';
 import {
@@ -31,16 +31,12 @@ const projects = [
     },
     // More projects...
 ]
-const activityItems = [
-    { project: 'Development of task management application', commit: '', environment: 'production', time: '5h' },
-    // More items...
-]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function HomeAdmin() {
+export const HomeAdmin = () => {
     return (
         <>
             {/* Background color split screen for large screens */}

@@ -1,9 +1,9 @@
-import { Component } from "react";
+import React from "react";
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { NavLink } from "react-router-dom";
 
-export default class ForgotPassword extends Component {
-    render() {
+export const ForgotPassword = () => {
+
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
 
@@ -87,5 +87,4 @@ export default class ForgotPassword extends Component {
 
             </div>
         )
-    }
 }

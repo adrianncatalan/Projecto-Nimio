@@ -1,14 +1,21 @@
-// import { useState } from 'react';
+import React from "react";
 import { Switch } from '@headlessui/react';
-import { Component } from "react";
-// import { Switch, Route } from 'react-router-dom';
+import { SelectorOne } from "../../components/selectors/SelectorOne";
+import { useNewProject } from "../../services/useNewProject";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default class NewProject extends Component {
-    render() {
+export const NewProject = () => {
+
+
+        const {
+            selected,
+            setSelected,
+            customers
+        } = useNewProject()
+
         return (
             <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
                 <div className="relative max-w-xl mx-auto">
@@ -69,7 +76,7 @@ export default class NewProject extends Component {
                                     ID customer
                                 </label>
                                 <div className="mt-1">
-                                    <input
+                                    {/* <input
                                         required
                                         placeholder='Enter ID customer'
                                         type="text"
@@ -77,6 +84,11 @@ export default class NewProject extends Component {
                                         id="id-customer"
                                         autoComplete="given-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    /> */}
+                                    <SelectorOne
+                                        items={customers}
+                                        selected={selected}
+                                        setSelected={setSelected}
                                     />
                                 </div>
                             </div>
@@ -162,5 +174,5 @@ export default class NewProject extends Component {
                 </div>
             </div>
         )
-    }
+ 
 }

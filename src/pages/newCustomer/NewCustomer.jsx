@@ -1,14 +1,12 @@
-// import { useState } from 'react';
+import React from "react";
 import { Switch } from '@headlessui/react';
-import { Component } from "react";
-// import { Switch, Route } from 'react-router-dom';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-class Register extends Component {
-    render() {
+export const NewCustomer = () => {
+
         return (
             <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
                 <div className="relative max-w-xl mx-auto">
@@ -57,24 +55,24 @@ class Register extends Component {
                         <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
                     </svg>
                     <div className="text-center">
-                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Register your company</h2>
+                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Enter the new customer's data</h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            Enter your company's fiscal data or if you are a freelancer. You'll be able to consult, save information and create projects for periodic follow-ups.
+                            Enter the fiscal data of the new customer (Company or freelancer)
                         </p>
                     </div>
                     <div className="mt-12">
                         <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                    Employee's name
+                                    Customer name
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your firstname'
+                                        placeholder='Enter customer name'
                                         type="text"
-                                        name="first-name"
-                                        id="first-name"
+                                        name="customer-name"
+                                        id="customer-name"
                                         autoComplete="given-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
@@ -82,48 +80,47 @@ class Register extends Component {
                             </div>
                             <div>
                                 <label htmlFor="surname" className="block text-sm font-medium text-gray-700">
-                                    Employee's Surname
+                                    Customer surname
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your last surname'
+                                        placeholder='Enter customer surname'
                                         type="text"
-                                        name="sur-name"
-                                        id="text"
+                                        name="surname-customer"
+                                        id="surname-customer"
                                         autoComplete="family-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
-                            <div>
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                                    Employee's Password
+                            <div className="sm:col-span-2">
+                                <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
+                                    Enter customer company name
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your password'
-                                        type="password"
-                                        name="password"
-                                        id="pass-word"
-                                        // autoComplete="family-name"
+                                        placeholder='Enter customer company name'
+                                        type="text"
+                                        name="company-name"
+                                        id="company-name"
+                                        autoComplete="organization"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
-
                             <div className="sm:col-span-2">
                                 <label htmlFor="tax-id" className="block text-sm font-medium text-gray-700">
-                                    Tax ID number
+                                    Enter customer tax ID number
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your tax ID number'
+                                        placeholder='Enter customer Tax ID Number'
                                         type="text"
-                                        name="tax-id"
-                                        id="tax-id"
+                                        name="tax-id-customer"
+                                        id="tax-id-customer"
                                         autoComplete="organization"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
@@ -131,14 +128,14 @@ class Register extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                    Email
+                                    Email customer
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your email'
-                                        id="email"
-                                        name="email"
+                                        placeholder='Enter customer email'
+                                        id="email-customer"
+                                        name="email-customer"
                                         type="email"
                                         autoComplete="email"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -147,14 +144,14 @@ class Register extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                    Verify your Email
+                                    Verify new customer email
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your email'
-                                        id="verify-email"
-                                        name="verify-email"
+                                        placeholder='Verify customer email'
+                                        id="verify-email-customer"
+                                        name="verify-email-customer"
                                         type="email"
                                         autoComplete="email"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -162,20 +159,19 @@ class Register extends Component {
                                 </div>
                             </div>
 
-
                             <div className="sm:col-span-2">
                                 <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
-                                    Phone Number
+                                    Customer phone number
                                 </label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
 
                                     <input
                                         type="text"
-                                        name="phone-number"
-                                        id="phone-number"
+                                        name="phone-number-customer"
+                                        id="phone-number-customer"
                                         autoComplete="tel"
                                         className="py-3 px-4 block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                                        placeholder="Enter your phone number"
+                                        placeholder="Enter customer phone number"
                                     />
                                 </div>
                             </div>
@@ -221,7 +217,7 @@ class Register extends Component {
                                     type="submit"
                                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 >
-                                    Register
+                                    Register new customer
                                 </button>
                             </div>
                         </form>
@@ -229,7 +225,4 @@ class Register extends Component {
                 </div>
             </div>
         )
-    }
 }
-
-export default Register;

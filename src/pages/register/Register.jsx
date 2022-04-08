@@ -1,14 +1,13 @@
-// import { useState } from 'react';
+import React from "react";
 import { Switch } from '@headlessui/react';
-import { Component } from "react";
 // import { Switch, Route } from 'react-router-dom';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-class NewCustomer extends Component {
-    render() {
+export const Register = () => {
+
         return (
             <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
                 <div className="relative max-w-xl mx-auto">
@@ -57,24 +56,56 @@ class NewCustomer extends Component {
                         <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
                     </svg>
                     <div className="text-center">
-                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Enter the new customer's data</h2>
+                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Register your company</h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            Enter the fiscal data of the new customer (Company or freelancer)
+                            Enter your company's fiscal data or if you are a freelancer. You'll be able to consult, save information and create projects for periodic follow-ups.
                         </p>
                     </div>
                     <div className="mt-12">
                         <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                             <div>
-                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                    Customer name
+                                <label htmlFor="user-name" className="block text-sm font-medium text-gray-700">
+                                    Username
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter customer name'
+                                        placeholder='Enter your username'
                                         type="text"
-                                        name="customer-name"
-                                        id="customer-name"
+                                        name="username"
+                                        id="username"
+                                        autoComplete="given-name"
+                                        className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                                    Password
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        required
+                                        placeholder='Enter your password'
+                                        type="password"
+                                        name="password"
+                                        id="pass-word"
+                                        // autoComplete="family-name"
+                                        className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                    First name
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        required
+                                        placeholder='Enter your firstname'
+                                        type="text"
+                                        name="first-name"
+                                        id="first-name"
                                         autoComplete="given-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
@@ -82,15 +113,15 @@ class NewCustomer extends Component {
                             </div>
                             <div>
                                 <label htmlFor="surname" className="block text-sm font-medium text-gray-700">
-                                    Customer surname
+                                    Surname
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter customer surname'
+                                        placeholder='Enter your last surname'
                                         type="text"
-                                        name="surname-customer"
-                                        id="surname-customer"
+                                        name="sur-name"
+                                        id="text"
                                         autoComplete="family-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
@@ -98,12 +129,12 @@ class NewCustomer extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
-                                    Enter customer company name
+                                    Company name
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter customer company name'
+                                        placeholder='Enter your company name'
                                         type="text"
                                         name="company-name"
                                         id="company-name"
@@ -114,15 +145,15 @@ class NewCustomer extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="tax-id" className="block text-sm font-medium text-gray-700">
-                                    Enter customer tax ID number
+                                    Tax ID number
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter customer Tax ID Number'
+                                        placeholder='Enter your tax ID number'
                                         type="text"
-                                        name="tax-id-customer"
-                                        id="tax-id-customer"
+                                        name="tax-id"
+                                        id="tax-id"
                                         autoComplete="organization"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
@@ -130,14 +161,14 @@ class NewCustomer extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                    Email customer
+                                    Email
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter customer email'
-                                        id="email-customer"
-                                        name="email-customer"
+                                        placeholder='Enter your email'
+                                        id="email"
+                                        name="email"
                                         type="email"
                                         autoComplete="email"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -146,36 +177,39 @@ class NewCustomer extends Component {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                    Verify new customer email
+                                    Verify your Email
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Verify customer email'
-                                        id="verify-email-customer"
-                                        name="verify-email-customer"
+                                        placeholder='Enter your email'
+                                        id="verify-email"
+                                        name="verify-email"
                                         type="email"
                                         autoComplete="email"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
+                            
+
                             <div className="sm:col-span-2">
                                 <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
-                                    Customer phone number
+                                    Phone Number
                                 </label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
 
                                     <input
                                         type="text"
-                                        name="phone-number-customer"
-                                        id="phone-number-customer"
+                                        name="phone-number"
+                                        id="phone-number"
                                         autoComplete="tel"
                                         className="py-3 px-4 block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                                        placeholder="Enter customer phone number"
+                                        placeholder="Enter your phone number"
                                     />
                                 </div>
                             </div>
+
                             <div className="sm:col-span-2">
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
@@ -217,7 +251,7 @@ class NewCustomer extends Component {
                                     type="submit"
                                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 >
-                                    Register new customer
+                                    Register
                                 </button>
                             </div>
                         </form>
@@ -225,7 +259,4 @@ class NewCustomer extends Component {
                 </div>
             </div>
         )
-    }
 }
-
-export default NewCustomer;

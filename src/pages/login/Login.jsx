@@ -1,9 +1,9 @@
-import { Component } from "react";
+import React from "react";
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { NavLink } from "react-router-dom";
 
-class Login extends Component {
-    render() {
+export const Login = () => {
+
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8">
@@ -16,12 +16,7 @@ class Login extends Component {
                         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Or{' '}
-
                             <NavLink to='/register' className="font-medium text-indigo-600 hover:text-indigo-500">Register your company</NavLink>
-
-                            {/* <a href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                Register your company
-                            </a> */}
                         </p>
                     </div>
                     <form className="mt-8 space-y-6" action="#" method="POST">
@@ -29,7 +24,7 @@ class Login extends Component {
                         <div className="rounded-md shadow-sm -space-y-px">
                             <div>
                                 <label htmlFor="email-address" className="sr-only">
-                                        Email
+                                    Email
                                 </label>
                                 <input
                                     id="email"
@@ -71,9 +66,7 @@ class Login extends Component {
                             </div>
 
                             <div className="text-sm">
-                                <a href="forgotPassword" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                    Forgot your password?
-                                </a>
+                                <NavLink to='/forgotPassword' className="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</NavLink>
                             </div>
                         </div>
 
@@ -93,7 +86,4 @@ class Login extends Component {
 
             </div>
         )
-    }
 }
-
-export default Login;

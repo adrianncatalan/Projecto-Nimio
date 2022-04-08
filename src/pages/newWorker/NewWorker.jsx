@@ -1,14 +1,12 @@
-// import { useState } from 'react';
+import React from "react";
 import { Switch } from '@headlessui/react';
-import { Component } from "react";
-// import { Switch, Route } from 'react-router-dom';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-class Register extends Component {
-    render() {
+export const NewWorker = () => {
+
         return (
             <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
                 <div className="relative max-w-xl mx-auto">
@@ -65,40 +63,8 @@ class Register extends Component {
                     <div className="mt-12">
                         <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                             <div>
-                                <label htmlFor="user-name" className="block text-sm font-medium text-gray-700">
-                                    Username
-                                </label>
-                                <div className="mt-1">
-                                    <input
-                                        required
-                                        placeholder='Enter your username'
-                                        type="text"
-                                        name="username"
-                                        id="username"
-                                        autoComplete="given-name"
-                                        className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                                    Password
-                                </label>
-                                <div className="mt-1">
-                                    <input
-                                        required
-                                        placeholder='Enter your password'
-                                        type="password"
-                                        name="password"
-                                        id="pass-word"
-                                        // autoComplete="family-name"
-                                        className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                                    />
-                                </div>
-                            </div>
-                            <div>
                                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                    First name
+                                    Employee's name
                                 </label>
                                 <div className="mt-1">
                                     <input
@@ -114,7 +80,7 @@ class Register extends Component {
                             </div>
                             <div>
                                 <label htmlFor="surname" className="block text-sm font-medium text-gray-700">
-                                    Surname
+                                    Employee's Surname
                                 </label>
                                 <div className="mt-1">
                                     <input
@@ -128,22 +94,23 @@ class Register extends Component {
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
-                                    Company name
+                            <div>
+                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                                    Employee's Password
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         required
-                                        placeholder='Enter your company name'
-                                        type="text"
-                                        name="company-name"
-                                        id="company-name"
-                                        autoComplete="organization"
+                                        placeholder='Enter your password'
+                                        type="password"
+                                        name="password"
+                                        id="pass-word"
+                                        // autoComplete="family-name"
                                         className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
+
                             <div className="sm:col-span-2">
                                 <label htmlFor="tax-id" className="block text-sm font-medium text-gray-700">
                                     Tax ID number
@@ -192,7 +159,7 @@ class Register extends Component {
                                     />
                                 </div>
                             </div>
-                            
+
 
                             <div className="sm:col-span-2">
                                 <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
@@ -260,7 +227,4 @@ class Register extends Component {
                 </div>
             </div>
         )
-    }
 }
-
-export default Register;

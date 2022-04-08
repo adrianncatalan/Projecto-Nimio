@@ -1,8 +1,7 @@
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import 'boxicons';
 import {
-    BadgeCheckIcon,
     ChevronDownIcon,
     ChevronRightIcon,
     CollectionIcon,
@@ -10,7 +9,6 @@ import {
     SortAscendingIcon,
 } from '@heroicons/react/solid'
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
-import NewTask from '../newTask/newTask';
 
 const navigation = [
     { name: 'Settings', href: '/settings', current: true },
@@ -31,16 +29,12 @@ const projects = [
     },
     // More projects...
 ]
-const activityItems = [
-    { project: 'Development of task management application', commit: '', environment: 'production', time: '5h' },
-    // More items...
-]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function HomeAdmin() {
+export const HomeWorker = () => {
     return (
         <>
             {/* Background color split screen for large screens */}

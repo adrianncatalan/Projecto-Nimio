@@ -1,7 +1,7 @@
-import { Component } from "react";
+import React from "react";
 
-export default class NotFoundPage extends Component {
-    render() {
+export const NotFoundPage = () => {
+
         return (
             /* This example requires Tailwind CSS v2.0+ */
 
@@ -33,5 +33,4 @@ export default class NotFoundPage extends Component {
                
             </div>
         )
-    }
 }

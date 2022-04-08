@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import { Dialog, Switch, Transition } from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
 import {
     CogIcon,
     HomeIcon,
@@ -21,7 +21,8 @@ function classNames(...classes) {
 
 
 
-export default function Component() {
+export const Settings = () => {
+
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
